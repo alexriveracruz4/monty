@@ -8,8 +8,13 @@
  * Return: EXIT_SUCCESS or  EXIT_FAILURE
  */
 
-int main(int argc, char**argv)
+int main(int argc, char **argv)
 {
+	FILE *f = NULL;
+	char *line = NULL, *opcode = NULL;
+	size_t n = 0;
+	unsigned int n_line = 0;
+	stack_t *stack = NULL;
 
 	if (argc != 2)
 	{
@@ -17,12 +22,21 @@ int main(int argc, char**argv)
 		exit(EXIT_FAILURE);
 	}
 
+	f = fopen(argv[1], "r");
 
-	if (fopen(argv[1], "r") == NULL)
+	if (f == NULL)
 	{
 
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
+	}
+
+	while (getline(&line, &n, f) != -1)
+	{
+		n_line++;
+		opcode = strtok(line, " \n\t\r");
+		if (opcode != NULL)
+			app_opcode(opcode, &stack, n_line);
 	}
 
 
