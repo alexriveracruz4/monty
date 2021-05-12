@@ -11,11 +11,11 @@ int check_digit(char *str)
 {
 	int i;
 
-	for (i = 0; arg[i]; i++)
+	for (i = 0; str[i]; i++)
 	{
-		if (arg[i] == '-' && i == 0)
+		if (str[i] == '-' && i == 0)
 			continue;
-		if (isdigit(arg[i]) == 0)
+		if (isdigit(str[i]) == 0)
 			return (1);
 	}
 	return (0);
@@ -41,7 +41,7 @@ void _push(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	number = atoi(arg);
-	if (add_node(stack, n) == NULL)
+	if (add_node(stack, number) == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
