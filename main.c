@@ -1,5 +1,7 @@
 #include "monty.h"
 
+int len_stack;
+
 /**
  * main - main function of monty
  * @argc: number of arguments
@@ -30,6 +32,8 @@ int main(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
+
+	len_stack = 0;
 
 	while (getline(&line, &n, f) != -1)
 	{
