@@ -13,6 +13,7 @@ void app_opcode(char *opc, stack_t **stack, unsigned int n_line)
 	int i;
 
 	instruction_t list_opcodes[] = {
+		{"push", _push},
 		{NULL, NULL}
 	};
 
