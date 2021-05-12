@@ -3,8 +3,8 @@
 /**
  * app_opcode - check and apply if opcode exist
  * @opc: opdocode to check
- * @stack: pointer to pointer to a doubly linked list
- * @n_line: line number
+ * @stack: pointer to pointer to stack
+ * @n_line: number of line executed
  *
  * Return: void:
  */
@@ -19,6 +19,7 @@ void app_opcode(char *opc, stack_t **stack, unsigned int n_line)
 		{"pop", _pop},
 		{"swap", _swap},
 		{"add", _add},
+		{"nop", _nop},
 		{NULL, NULL}
 	};
 
