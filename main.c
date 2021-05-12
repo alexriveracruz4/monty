@@ -34,6 +34,8 @@ int main(int argc, char **argv)
 	}
 
 	on_exit(free_line, &line);
+	on_exit(free_stack, &stack);
+
 	len_stack = 0;
 
 	while (getline(&line, &n, f) != -1)
@@ -43,7 +45,6 @@ int main(int argc, char **argv)
 		if (opcode != NULL)
 			app_opcode(opcode, &stack, n_line);
 	}
-
 
 	exit(EXIT_SUCCESS);
 }
