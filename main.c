@@ -33,6 +33,7 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
+	on_exit(free_line, &line);
 	len_stack = 0;
 
 	while (getline(&line, &n, f) != -1)
