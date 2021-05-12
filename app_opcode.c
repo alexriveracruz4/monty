@@ -18,6 +18,7 @@ void app_opcode(char *opc, stack_t **stack, unsigned int n_line)
 		{"pint", _pint},
 		{"pop", _pop},
 		{"swap", _swap},
+		{"add", _add},
 		{NULL, NULL}
 	};
 
