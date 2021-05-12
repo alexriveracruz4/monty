@@ -45,5 +45,6 @@ typedef struct instruction_s
 void app_opcode(char *opc, stack_t **stack, unsigned int n_line);
 void _push(stack_t **stack, unsigned int line_number);
 stack_t *add_node(stack_t **stack, int n);
+void _pall(stack_t **stack, unsigned int line_number);
 
 #endif
