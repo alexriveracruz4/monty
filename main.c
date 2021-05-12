@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		write(STDERR_FILENO, "Usage: monty file\n", 18);
+		write(STDOUT_FILENO, "Usage: monty file\n", 18);
 		exit(EXIT_FAILURE);
 	}
 
@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	if (f == NULL)
 	{
 
-		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
+		dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 
