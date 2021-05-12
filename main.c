@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 
 	on_exit(free_line, &line);
 	on_exit(free_stack, &stack);
-
+	on_exit(close_file, f);
 	len_stack = 0;
 
 	while (getline(&line, &n, f) != -1)
