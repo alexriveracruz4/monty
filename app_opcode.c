@@ -21,6 +21,7 @@ void app_opcode(char *opc, stack_t **stack, unsigned int n_line)
 		{"add", _add},
 		{"nop", _nop},
 		{"sub", _sub},
+		{"div", _div},
 		{NULL, NULL}
 	};
 
