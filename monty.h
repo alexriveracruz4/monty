@@ -40,6 +40,10 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/*Extern variable to control lenght of stack*/
+
+extern int len_stack;
+
 /*Functions*/
 
 void app_opcode(char *opc, stack_t **stack, unsigned int n_line);
@@ -48,5 +52,6 @@ stack_t *add_node(stack_t **stack, int n);
 void _pall(stack_t **stack, unsigned int line_number);
 void _pint(stack_t **stack, unsigned int line_number);
 void _pop(stack_t **stack, unsigned int line_number);
+void _swap(stack_t **stack, unsigned int line_number);
 
 #endif
