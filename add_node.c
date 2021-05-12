@@ -10,8 +10,7 @@
 stack_t *add_node(stack_t **stack, int n)
 {
 	stack_t *new;
-	if (stack == NULL)
-		return (NULL);
+
 	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 		return (NULL);
