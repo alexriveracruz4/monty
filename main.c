@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		write(STDOUT_FILENO, "Usage: monty file\n", 18);
+		write(STDERR_FILENO, "Usage: monty file\n", 18);
 		exit(EXIT_FAILURE);
 	}
 
