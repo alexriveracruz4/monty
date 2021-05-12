@@ -29,7 +29,7 @@ int main(int argc, char **argv)
 	if (f == NULL)
 	{
 
-		dprintf(STDOUT_FILENO, "Error: Can't open file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
 
