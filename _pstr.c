@@ -21,6 +21,8 @@ void _pstr(stack_t **stack, unsigned int line_number)
 	{
 		printf("%c", tmp->n);
 		tmp = tmp->next;
+		if (tmp == *stack)
+			break;
 	}
 
 	printf("\n");
