@@ -25,5 +25,5 @@ void free_stack(int s, void *arg)
 		free(*stack);
 		*stack = tmp;
 	}
-	len_stack = 0;
+	flag.len_stack = 0;
 }

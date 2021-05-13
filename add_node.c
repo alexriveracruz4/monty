@@ -27,6 +27,7 @@ stack_t *add_node(stack_t **stack, int n)
 		(*stack)->prev = new;
 		new->next = *stack;
 	}
-	*stack = new;
+	if (flag.mode == 0 || *stack == NULL)
+		*stack = new;
 	return (new);
 }
