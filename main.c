@@ -42,7 +42,7 @@ int main(int argc, char **argv)
 	{
 		n_line++;
 		opcode = strtok(line, " \n\t\r");
-		if (opcode != NULL)
+		if (opcode != NULL && opcode[0] != '#')
 			app_opcode(opcode, &stack, n_line);
 	}
 
