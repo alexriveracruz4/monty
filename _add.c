@@ -11,7 +11,7 @@ void _add(stack_t **stack, unsigned int line_number)
 {
 	int sum;
 
-	if (len_stack < 2)
+	if (flag.len_stack < 2)
 	{
 		dprintf(STDERR_FILENO, "L%u: can't add, stack too short\n",
 			line_number);
