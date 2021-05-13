@@ -1,6 +1,6 @@
 #include "monty.h"
 
-int len_stack;
+flag_t flag;
 
 /**
  * main - main function of monty
@@ -36,7 +36,8 @@ int main(int argc, char **argv)
 	on_exit(free_line, &line);
 	on_exit(free_stack, &stack);
 	on_exit(close_file, f);
-	len_stack = 0;
+	flag.len_stack = 0;
+	flag.mode = 0;
 
 	while (getline(&line, &n, f) != -1)
 	{

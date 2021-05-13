@@ -40,9 +40,20 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct flag_s - struct to control if is stack or queue and length
+ * @mode: stack or queue (0 if stack, 1 if queue)
+ * @len_stack: length of stack
+ */
+typedef struct flag_s
+{
+	int mode;
+	int len_stack;
+} flag_t;
+
 /*Extern variable to control lenght of stack*/
 
-extern int len_stack;
+extern flag_t flag;
 
 /*Functions*/
 
