@@ -31,5 +31,5 @@ void _pop(stack_t **stack, unsigned int line_number)
 	(tmp->prev)->next = *stack;
 	(*stack)->prev = tmp->prev;
 	free(tmp);
-	len_stack--;
+	flag.len_stack--;
 }

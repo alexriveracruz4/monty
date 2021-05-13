@@ -46,5 +46,5 @@ void _push(stack_t **stack, unsigned int line_number)
 		dprintf(STDERR_FILENO, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 	}
-	len_stack++;
+	flag.len_stack++;
 }
