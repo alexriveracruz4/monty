@@ -25,6 +25,7 @@ void app_opcode(char *opc, stack_t **stack, unsigned int n_line)
 		{"mul", _mul},
 		{"mod", _mod},
 		{"pchar", _pchar},
+		{"pstr", _pstr},
 		{NULL, NULL}
 	};
 
