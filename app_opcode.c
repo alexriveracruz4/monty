@@ -28,6 +28,8 @@ void app_opcode(char *opc, stack_t **stack, unsigned int n_line)
 		{"pstr", _pstr},
 		{"rotl", _rotl},
 		{"rotr", _rotr},
+		{"stack", _stack},
+		{"queue", _queue},
 		{NULL, NULL}
 	};
 
